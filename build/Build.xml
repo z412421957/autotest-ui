@@ -1,0 +1,40 @@
+<project basedir="." default="copyfile" name="API automation test">  
+	<!-- ========== Initialize Properties =================================== -->
+	<!-- set global properties for build -->
+		<property name="lib" location="../lib" />
+		<property name="src" location="../src" />
+		<property name="bin" location="../bin" />
+	
+	<!-- ====== Set the classpath ====  -->
+		<path id="classpath">
+			<pathelement location="${bin}" />
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+	<!-- Delete directories  -->
+		<target name="delete-dir">
+			<delete dir="${bin}" />
+		</target>
+		
+		<!-- Creating directories -->
+		<target name="create" depends="delete-dir">
+			<mkdir dir="${bin}" />
+			<mkdir dir="${bin}/com/neso/testsuite" />
+		</target>
+		
+		<!-- Compile the java code from ${src} into ${bin} -->
+		<target name="compile" depends="create">
+			<javac srcdir="${src}" classpathref="classpath" includeAntRuntime="No" destdir="${bin}" />
+			<echo> /* Compiled Directory Classes */ </echo>
+			<echo> ${lib} </echo>
+		</target>
+		
+		<target name="copyfile" depends="compile">
+			<copy todir="${bin}/com/neso/testsuite">
+				<fileset dir="${src}/com/neso/testsuite"/>
+			</copy>
+			<copy file="${src}/log4j.properties" tofile="${bin}/log4j.properties"/>
+		</target>
+</project>

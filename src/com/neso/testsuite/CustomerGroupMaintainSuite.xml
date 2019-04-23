@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CustomerGroupMaintain" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="load" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkPageLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addNew" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkAddNewLoad" />
+			      <include name="checkAddNewRules" />
+			      <include name="checkAddNewNoApply" />
+			      <include name="checkAddNewApply" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkSearch" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="modify" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkModifyRules" />
+				  <include name="checkModifyNoApply" />
+				  <include name="checkModifyApply" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="assignPriceTypes" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkAssignPriceTypesRules" />
+				  <include name="checkAssignPriceTypes" />
+				  <include name="checkAssignRemoveTypes" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="assignCustomers" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkRemoveCustomer" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="deactive" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerGroupMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkDeactive" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CtiCallDashboard" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="url2" value="@url2@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addMerchant" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.TemporaryAssignmentCase">
+				<methods preserve-order="true">
+				  <include name="checkAddMerchant" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addMerchantRules" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.TemporaryAssignmentCase">
+				<methods preserve-order="true">
+				  <include name="checkMerchantAssigned" />
+				  <include name="checkMerchantInfo" />
+				  <include name="checkNewButton" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="assignmentQuerySearch" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.TemporaryAssignmentCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchAll" />
+				  <include name="checkSearchAgent" />
+				  <include name="checkClickColumn" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="assignmentLogQuery" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.TemporaryAssignmentCase">
+				<methods preserve-order="true">
+				  <include name="checkLogLink" />
+				  <include name="checkLogSearchAll" />
+				  <include name="checkLogSearchAgent" />
+				  <include name="checkLogSearchMerchant" />
+				  <include name="checkLogMerchantAndAgent" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="cancelMerchant" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.TemporaryAssignmentCase">
+				<methods preserve-order="true">
+				  <include name="checkCancelUnassign" />
+				  <include name="checkRunUnassign" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

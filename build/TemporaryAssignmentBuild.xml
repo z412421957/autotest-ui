@@ -1,0 +1,52 @@
+<project basedir="." default="testng-execution" name="API automation test">  
+	<!-- ========== Initialize Properties =================================== -->
+	<!-- set global properties for build -->
+	<property name="lib" location="../lib" />
+	<property name="src" location="../src" />
+	<property name="bin" location="../bin" />
+	<property name="report-dir" location="../test-output" />
+	<property name="jenkins-report" location="../jenkins/TemporaryAssignmentReport" />
+	<property name="testng.file" value="TemporaryAssignmentSuite.xml"/> 
+	<property name="browser" value="${browser}" />
+	<property name="environment" value="${environment}" />
+	<property name="url" value="${url}" />
+	<property name="url2" value="${url2}" /> 
+	<property name="username" value="${username}" />
+	<property name="password" value="${password}" />
+	
+	<taskdef resource="testngtasks" classpath="${lib}/testng.jar"/>  
+	
+	<!-- ====== Set the classpath ====  -->
+	<path id="classpath">
+		<pathelement location="${bin}" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<!-- Delete directories  -->
+	<target name="delete-dir">
+		<delete dir="${report-dir}" />
+	</target>
+	
+	<!-- Creating directories -->
+	<target name="create" depends="delete-dir">
+		<mkdir dir="${report-dir}" />
+	</target>
+	
+	<target name="testng-execution" depends="create">
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@browser@" value="${browser}"></replace>
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@environment@" value="${environment}"></replace>
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@url@" value="${url}"></replace>
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@url2@" value="${url2}"></replace>
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@username@" value="${username}"></replace>
+		<replace file="${bin}/com/neso/testsuite/TemporaryAssignmentSuite.xml" token="@password@" value="${password}"></replace>
+		<testng outputdir="${report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${bin}/com/neso/testsuite" includes="${testng.file}"/>  
+		</testng>
+		<copy todir="${jenkins-report}">
+			<fileset dir="${report-dir}"/>
+		</copy>
+	</target>
+	
+</project>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [NESO_CallHistory]" parallel="none">
+  <parameter name="customerUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.NESO.Customer/CustomerMaintain?customernumber=%s"/>
+  <parameter name="environment" value="@environment@"/>
+  <parameter name="password" value="@password@"/>
+  <parameter name="sqlPassword" value="Read4all"/>
+  <parameter name="browser" value="@browser@"/>
+  <parameter name="followUpIDUrl" value="http://central.newegg.org/portal/#/NeweggCentral.NESO.InternalCommunicationCenter/RequestDetail?RequestID=%s&amp;Layout=Normal"/>
+  <parameter name="sqlUsername" value="Sqlreadonly"/>
+  <parameter name="orderDetailUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.NESO.OrderDetail/OrderDetail"/>
+  <parameter name="url" value="@url@"/>
+  <parameter name="merchantUrl" value="http://centraltest2.newegg.org/neso-crm/merchant-detail?merchantid=%s"/>
+  <parameter name="orderMaintainUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.B2B.B2BSO/B2BMaintain"/>
+  <parameter name="username" value="@username@"/>
+  <listeners>
+    <listener class-name="com.neso.factory.TestListener"/>
+    <listener class-name="com.neso.factory.RetryListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Login(failed)" parallel="none">
+    <classes>
+      <class name="com.neso.testcase.LoginCase">
+        <methods>
+          <include name="checkLogin"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.neso.testcase.LoginCase -->
+    </classes>
+  </test> <!-- Login(failed) -->
+  <test name="dataLoad(failed)" parallel="none">
+    <classes>
+      <class name="com.neso.testcase.LoginCase">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.neso.testcase.LoginCase -->
+      <class name="com.neso.testcase.CallHistoryCase">
+        <methods>
+          <include name="checkDataLoad"/>
+        </methods>
+      </class> <!-- com.neso.testcase.CallHistoryCase -->
+    </classes>
+  </test> <!-- dataLoad(failed) -->
+  <test name="searchRules(failed)" parallel="none">
+    <classes>
+      <class name="com.neso.testcase.LoginCase">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.neso.testcase.LoginCase -->
+      <class name="com.neso.testcase.CallHistoryCase">
+        <methods>
+          <include name="checkInputLength2"/>
+          <include name="checkLoadFollowUp"/>
+          <include name="checkInputLength"/>
+          <include name="checkSearch"/>
+          <include name="checkDefaultSearch"/>
+          <include name="checkInputTypeRules"/>
+        </methods>
+      </class> <!-- com.neso.testcase.CallHistoryCase -->
+    </classes>
+  </test> <!-- searchRules(failed) -->
+  <test name="edit(failed)" parallel="none">
+    <classes>
+      <class name="com.neso.testcase.LoginCase">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.neso.testcase.LoginCase -->
+      <class name="com.neso.testcase.CallHistoryCase">
+        <methods>
+          <include name="checkEdit"/>
+          <include name="checkEditRules"/>
+        </methods>
+      </class> <!-- com.neso.testcase.CallHistoryCase -->
+    </classes>
+  </test> <!-- edit(failed) -->
+  <test name="linkOtherPage(failed)" parallel="none">
+    <parameter name="customerUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.NESO.Customer/CustomerMaintain?customernumber=%s"/>
+    <parameter name="followUpIDUrl" value="http://central.newegg.org/portal/#/NeweggCentral.NESO.InternalCommunicationCenter/RequestDetail?RequestID=%s&amp;Layout=Normal"/>
+    <parameter name="orderDetailUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.NESO.OrderDetail/OrderDetail"/>
+    <parameter name="merchantUrl" value="http://centraltest2.newegg.org/neso-crm/merchant-detail?merchantid=%s"/>
+    <parameter name="orderMaintainUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.B2B.B2BSO/B2BMaintain"/>
+    <classes>
+      <class name="com.neso.testcase.LoginCase">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.neso.testcase.LoginCase -->
+      <class name="com.neso.testcase.SocialMediaCase">
+        <methods>
+          <include name="checkLinkOtherPage"/>
+        </methods>
+      </class> <!-- com.neso.testcase.SocialMediaCase -->
+    </classes>
+  </test> <!-- linkOtherPage(failed) -->
+</suite> <!-- Failed suite [NESO_CallHistory] -->

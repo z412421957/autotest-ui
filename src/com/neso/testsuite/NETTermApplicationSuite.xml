@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_NETTermApplication" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="url2" value="@url2@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+				  <include name="checkTextLoad" />
+				  <include name="checkButtonLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addNew" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkAddNewRules" />
+				  <include name="checkAddNew" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="edit" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkEdit" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="approve" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkApprove" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="copyNew" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkCopyNew" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="decline" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkDecline" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<!-- <test name="queryDataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkQueryDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="querySearch" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkQuerySearch" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="queryDecline" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.NETTermApplicationCase">
+				<methods preserve-order="true">
+				  <include name="checkQueryDecline" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>   -->
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

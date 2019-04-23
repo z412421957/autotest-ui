@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="searchRules"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="6"
+           time="0.000">
+  <properties />
+  
+            <testcase name="checkInputTypeRules" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+            <testcase name="checkInputLength" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+            <testcase name="checkInputLength2" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+            <testcase name="checkLoadFollowUp" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+            <testcase name="checkSearch" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+            <testcase name="checkDefaultSearch" time="0.0" classname="com.neso.testcase.CallHistoryCase">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

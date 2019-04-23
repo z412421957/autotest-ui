@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CallHistory" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="SoDbo" />
+	<parameter name="sqlPassword" value="So4Dev" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="load" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkPageLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchDefault" />
+				  <include name="checkSearchPlanID" />
+				  <include name="checkSearchPlanStatus" />
+				  <include name="checkSearchMerchantID" />
+				  <include name="checkCallStatus" />
+				  <include name="checkCreateBy" />
+				  <include name="checkDate" />
+				  <include name="checkAssignTo" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addPlan" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkAddPlanRules" />
+				  <include name="checkAddPlan" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="edit" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkEditPlanRules" />
+				  <include name="checkEditPlan" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addCallPlan" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkAddCallPlan" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="matchMerchant" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkMatchMerchantRules" />
+				  <include name="checkMatchMerchant" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="deleteMerchant" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkDeleteMerchant" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="updateMerchantStatus" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkUpdateMerchantStatus" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addNote" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkAddNote" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addContact" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkAddContact" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addOpportunity" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkAddOpportunity" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="deleteCallPlan" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallPlanProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkDeleteCallPlan" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

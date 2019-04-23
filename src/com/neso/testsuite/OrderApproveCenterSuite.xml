@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_OrderApproveCenter" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="load" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.OrderApproveCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="query" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.OrderApproveCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchApprove" />
+				  <include name="checkQuery" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="view" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.OrderApproveCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkCustomerInfo" />
+				  <include name="checkAmountInfo" />
+				  <include name="checkAdditionalInfo" />
+				  <include name="checkApproveLog" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="approve" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.OrderApproveCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkApproveAndDecline" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="processLog" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.OrderApproveCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkProcessNoDataLoad" />
+				  <include name="checkProcessSearch" />
+				  <include name="checkProcessData" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

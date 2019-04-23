@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CustomerMaintain" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="pageLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkPageLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="createNewRules" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkCreateNewRules" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="createNewUSA" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkCreateNewUSA" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="createNewCHN" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkCreateNewCHN" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="createNewInl" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkCreateNewInl" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="editCustomerUSA" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkEditCustomerUSA" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="editCustomerCHN" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkEditCustomerCHN" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="editCustomerInl" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkEditCustomerInl" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="editCustomerUSB" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkEditCustomerUSB" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="loadInvalidCustomer" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkLoadInvalidCustomer" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="changePassword" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkChangePassword" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="customerMemo" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CustomerMaintainCase">
+				<methods preserve-order="true">
+				  <include name="checkCustomerMemo" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

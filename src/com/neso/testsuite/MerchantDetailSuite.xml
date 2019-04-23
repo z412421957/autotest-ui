@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_MerchantDetail" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchRules" />
+				  <include name="checkSearch" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="shippingAccountContract" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkAccountContractRules" />
+				  <include name="checkAccountContract" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="mailCustomer" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkMailCustomer" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="notePG" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkNotePG" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="linkOtherPage" preserver-order="true">
+	<parameter name="soProcess" value="https://central3testing.newegg.org/neso-soprocess/main" />
+	<parameter name="customerBalance" value="https://central3testing.newegg.org/neso-customerbalance/customerbalance" />
+	<parameter name="merchantBalance" value="https://central3testing.newegg.org/neso-crm-merchant-balance/main" />
+	<parameter name="customerReport" value="https://central3testing.newegg.org/neso-customer-reportcard/customerreportcard" />
+	<parameter name="merchantReport" value="http://central.newegg.org/portal/#/NeweggCentral.NESO.CRM/MerchantReportCard" />
+	<parameter name="merchantDashboard" value="https://central3testing.newegg.org/neso-crm-dashboard/main" />
+	<parameter name="penGlobe" value="https://central3testing.newegg.org/neso-penglobe/penglobe" />
+	<parameter name="reminder" value="http://centraltest.newegg.org/Portal/#/NeweggCentral.NESO.InternalCommunicationCenter/SendRequest?templateid=1318&amp;#DV_CustomerNumber#=47234274&amp;#DV_CustomerName#=Garre%20Gou&amp;#DV_MerchantNumber#=1052168&amp;#DV_MerchantName#=Mer123" />
+	<parameter name="newSO" value="http://central.newegg.org/Portal/#/NeweggCentral.B2B.B2BSO/B2BMaintain" />
+		<classes>
+			<class name="com.neso.testcase.MerchantDetailCase">
+				<methods preserve-order="true">
+				  <include name="checkLinkOtherPage1" />
+				  <include name="checkLinkOtherPage2" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

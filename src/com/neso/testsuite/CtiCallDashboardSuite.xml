@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CtiCallDashboard" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="sodbo" />
+	<parameter name="sqlPassword" value="So4Dev" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CtiCallDashboardCase">
+				<methods preserve-order="true">
+				  <include name="checkRecentButtonChecked" />
+			      <include name="checkAgentLoad" />
+			      <include name="checkTotalCallsLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="detailFilter" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CtiCallDashboardCase">
+				<methods preserve-order="true">
+				  <include name="checkDetailFilter" />
+			      <include name="checkClearFilter" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="conditionReport" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CtiCallDashboardCase">
+				<methods preserve-order="true">
+				  <include name="checkRecentReport" />
+			      <include name="checkTypeReport" />
+			      <include name="checkWorkedMonthsReport" />
+			      <include name="checkCallDurationReport" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="agentReport" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CtiCallDashboardCase">
+				<methods preserve-order="true">
+				  <include name="checkAgentReport" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CtiCallDashboardCase">
+				<methods preserve-order="true">
+				  <include name="checkPhoneNumberSearch" />
+			      <include name="checkCustomerIDSearch" />
+			      <include name="checkResetSearch" />
+			      <include name="checkTimeSearch" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

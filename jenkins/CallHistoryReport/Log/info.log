@@ -1,0 +1,22 @@
+2018-03-14 08:46:37 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkLogin~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:37 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: LoginCase.checkLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.neso.testcase.LoginCase@cc285f4]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:39 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkDataLoad~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:39 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkDataLoad()[pri:0, instance:com.neso.testcase.CallHistoryCase@68c4039c]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkDefaultSearch~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkDefaultSearch()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkInputTypeRules~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkInputTypeRules()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkInputLength~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkInputLength()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkInputLength2~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkInputLength2()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkSearch~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkSearch()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkLoadFollowUp~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:40 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkLoadFollowUp()[pri:0, instance:com.neso.testcase.CallHistoryCase@3e6fa38a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:41 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkEditRules~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:41 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkEditRules()[pri:0, instance:com.neso.testcase.CallHistoryCase@1bce4f0a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:41 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkEdit~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:41 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: CallHistoryCase.checkEdit(java.lang.String, java.lang.String)[pri:0, instance:com.neso.testcase.CallHistoryCase@1bce4f0a]~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:42 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestName: checkLinkOtherPage~~~~~~~~~~~~~~~~~~~~~
+2018-03-14 08:46:42 main INFO [com.neso.factory.TestListener] ~~~~~~~~~~~~~~~~~~~~~onTestSkipped TestMethod: SocialMediaCase.checkLinkOtherPage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.neso.testcase.SocialMediaCase@6d4b1c02]~~~~~~~~~~~~~~~~~~~~~

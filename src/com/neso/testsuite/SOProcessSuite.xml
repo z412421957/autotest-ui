@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_SOProcess" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="basicSearch" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkLoad" />
+				  <include name="checkSONumber" />
+				  <include name="checkCustomerNumber" />
+				  <include name="checkPhone" />
+				  <include name="checkRMANumber" />
+				  <include name="checkEmailAddress" />
+				  <include name="checkInvoiceNumber" />
+				  <include name="checkPreOrderNumber" />
+				  <include name="checkCCNumber" />
+				  <include name="checkTrackingNumber" />
+				 <!--  <include name="checkPriority" /> -->
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="advanceSearch" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  <include name="checkCreateUser" />
+				  <include name="checkContactPers" />
+				  <include name="checkShoppingCartNumber" />
+				  <include name="checkItemNumber" />
+				  <include name="checkItemDesc" />
+				  <include name="checkMerchantNumber" />
+				  <include name="checkEBayNumber" />
+				  <include name="checkCustomerPONumber" />
+				  <include name="checkStatus" />
+				  <include name="checkPayTermShipping" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<!-- <test name="contactPers" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="shoppingCartNumber" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="itemNumber" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="itemDesc" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="merchantNumber" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="eBayNumber" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="customerPONumber" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="status" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="payTermShipping" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SOProcessCase">
+				<methods preserve-order="true">
+				  
+			    </methods> 
+			</class>
+		</classes>
+	</test> -->
+
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

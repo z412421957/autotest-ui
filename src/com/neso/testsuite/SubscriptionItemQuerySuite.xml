@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_SubscriptionItemQuery" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Load" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.SubscriptionItemQueryCase">
+				<methods preserve-order="true">
+			      <include name="checkPageLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="query" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.SubscriptionItemQueryCase">
+				<methods preserve-order="true">
+			      <include name="checkBuProgramRules" />
+			      <include name="checkItemNumberRules" />
+			      <include name="checkItemNumberSearch" />
+			      <include name="checkProgramDetailLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

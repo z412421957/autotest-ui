@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_MerchantBalance" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="load" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantBalanceCase">
+				<methods preserve-order="true">
+				  <include name="checkLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantBalanceCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchMerchantID" />
+				  <include name="checkSearchInvoiceDate" />
+				  <include name="checkSearchDiscrepancyOnly" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="mailToCustomer" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantBalanceCase">
+				<methods preserve-order="true">
+				  <include name="checkMailToCustomerRules" />
+				  <include name="checkMailToCustomer" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="latePayNotification" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantBalanceCase">
+				<methods preserve-order="true">
+				  <include name="checkLatePayNotification" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="noteToPG" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.MerchantBalanceCase">
+				<methods preserve-order="true">
+				  <include name="checkNoteToPG" />
+			    </methods> 
+			</class>
+		</classes>
+	</test> 
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

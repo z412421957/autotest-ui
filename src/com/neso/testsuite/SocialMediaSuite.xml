@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_SocialMedia" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+				  <include name="checkTextStatus" />
+				  <include name="checkButtonStatus" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addSocialMediaRules" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkAddTextRules" />
+				  <include name="checkAddRequiredRules" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="addSocialMedia" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkAddSocialMedia" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="editSocialMedia" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkEditRules" />
+				  <include name="checkEditSocialMedia" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="searchSocialMedia" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchSocialMedia" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="deleteSocialMedia" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkDeleteSocialMedia" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="linkOtherPage" preserver-order="true">
+	<parameter name="penUrl" value="https://central3testing.newegg.org/neso-penglobe/penglobe" />
+	<parameter name="customerUrl" value="https://central3testing.newegg.org/neso-customermaintain/customermaintain?customerNumber=%s" />
+	<parameter name="reportUrl" value="https://central3testing.newegg.org/neso-customer-reportcard/customerreportcard?customernumber=%s" />
+		<classes>
+			<class name="com.neso.testcase.SocialMediaCase">
+				<methods preserve-order="true">
+				  <include name="checkLinkOtherPage" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

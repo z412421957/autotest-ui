@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CallHistory" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallHistoryCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="searchRules" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallHistoryCase">
+				<methods preserve-order="true">
+				  <include name="checkDefaultSearch" />
+				  <include name="checkInputTypeRules" />
+				  <include name="checkInputLength" />
+				  <include name="checkInputLength2" />
+				  <include name="checkSearch" />
+				  <include name="checkLoadFollowUp" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<!-- <test name="edit" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.CallHistoryCase">
+				<methods preserve-order="true">
+				  <include name="checkEditRules" />
+				  <include name="checkEdit" />
+			    </methods> 
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="linkOtherPage" preserver-order="true">
+	<parameter name="customerUrl" value="https://central3testing.newegg.org/neso-customermaintain/customermaintain?customerNumber=%s" />
+	<parameter name="merchantUrl" value="https://central3testing.newegg.org/neso-crm-merchant-detail/main?merchantid=%s" />
+	<parameter name="orderMaintainUrl" value="http://central.newegg.org/Portal/#/NeweggCentral.B2B.B2BSO/B2BMaintain" />
+	<parameter name="orderDetailUrl" value="https://central3testing.newegg.org/neso-orderdetail/main" />
+	<parameter name="followUpIDUrl" value="http://central.newegg.org/portal/#/NeweggCentral.NESO.InternalCommunicationCenter/RequestDetail?RequestID=%s&amp;Layout=Normal" />
+		<classes>
+			<class name="com.neso.testcase.CallHistoryCase">
+				<methods preserve-order="true">
+				  <include name="checkLinkOtherPage" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

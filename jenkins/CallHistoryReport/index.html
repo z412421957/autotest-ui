@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-NESO_CallHistory">
+              <span class="suite-name border-skipped">NESO_CallHistory</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-NESO_CallHistory">
+                    <span>D:\Garre\projects\NESOAuto-git\nesoauto\bin\com\neso\testsuite\CallHistorySuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-NESO_CallHistory">
+                    <span class="test-stats">5 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-NESO_CallHistory">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-NESO_CallHistory">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-NESO_CallHistory">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-NESO_CallHistory">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-NESO_CallHistory">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">11 methods,  11 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-NESO_CallHistory" class="hide-methods skipped suite-NESO_CallHistory"> (hide)</a> <!-- hide-methods skipped suite-NESO_CallHistory -->
+                      <a href="#" panel-name="suite-NESO_CallHistory" class="show-methods skipped suite-NESO_CallHistory"> (show)</a> <!-- show-methods skipped suite-NESO_CallHistory -->
+                    </span>
+                    <div class="method-list-content skipped suite-NESO_CallHistory">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkDataLoad">checkDataLoad</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkDefaultSearch">checkDefaultSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkEdit(Sqlreadonly, Read4all)">checkEdit(Sqlreadonly, Read4all)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkEditRules">checkEditRules</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkInputLength">checkInputLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkInputLength2">checkInputLength2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkInputTypeRules">checkInputTypeRules</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.SocialMediaCase" hash-for-method="checkLinkOtherPage">checkLinkOtherPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkLoadFollowUp">checkLoadFollowUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.LoginCase" hash-for-method="checkLogin(@url@, @username@, @password@)">checkLogin(@url@, @username@, @password@)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NESO_CallHistory" title="com.neso.testcase.CallHistoryCase" hash-for-method="checkSearch">checkSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-NESO_CallHistory -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-NESO_CallHistory" class="panel NESO_CallHistory">
+          <div class="suite-NESO_CallHistory-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.neso.testcase.LoginCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogin(@url@, @username@, @password@)">
+                  </a> <!-- checkLogin(@url@, @username@, @password@) -->
+                  <span class="method-name">checkLogin</span>
+                  <span class="parameters">(@url@, @username@, @password@)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-NESO_CallHistory-class-skipped -->
+          <div class="suite-NESO_CallHistory-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.neso.testcase.SocialMediaCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLinkOtherPage">
+                  </a> <!-- checkLinkOtherPage -->
+                  <span class="method-name">checkLinkOtherPage</span>
+                  <div class="stack-trace">org.testng.TestNGException: 
+Parameter &apos;penUrl&apos; is required by @Test on method checkLinkOtherPage but has not been marked @Optional or defined
+in D:\Garre\projects\NESOAuto-git\nesoauto\bin\com\neso\testsuite\CallHistorySuite.xml
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-NESO_CallHistory-class-skipped -->
+          <div class="suite-NESO_CallHistory-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.neso.testcase.CallHistoryCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkDataLoad">
+                  </a> <!-- checkDataLoad -->
+                  <span class="method-name">checkDataLoad</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkDefaultSearch">
+                  </a> <!-- checkDefaultSearch -->
+                  <span class="method-name">checkDefaultSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEdit(Sqlreadonly, Read4all)">
+                  </a> <!-- checkEdit(Sqlreadonly, Read4all) -->
+                  <span class="method-name">checkEdit</span>
+                  <span class="parameters">(Sqlreadonly, Read4all)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEditRules">
+                  </a> <!-- checkEditRules -->
+                  <span class="method-name">checkEditRules</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkInputLength">
+                  </a> <!-- checkInputLength -->
+                  <span class="method-name">checkInputLength</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkInputLength2">
+                  </a> <!-- checkInputLength2 -->
+                  <span class="method-name">checkInputLength2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkInputTypeRules">
+                  </a> <!-- checkInputTypeRules -->
+                  <span class="method-name">checkInputTypeRules</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLoadFollowUp">
+                  </a> <!-- checkLoadFollowUp -->
+                  <span class="method-name">checkLoadFollowUp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkSearch">
+                  </a> <!-- checkSearch -->
+                  <span class="method-name">checkSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-NESO_CallHistory-class-skipped -->
+        </div> <!-- panel NESO_CallHistory -->
+        <div panel-name="test-xml-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Garre\projects\NESOAuto-git\nesoauto\bin\com\neso\testsuite\CallHistorySuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;NESO_CallHistory&quot; parallel=&quot;none&quot;&gt;
+  &lt;parameter name=&quot;environment&quot; value=&quot;@environment@&quot;/&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;@password@&quot;/&gt;
+  &lt;parameter name=&quot;sqlPassword&quot; value=&quot;Read4all&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;@browser@&quot;/&gt;
+  &lt;parameter name=&quot;sqlUsername&quot; value=&quot;Sqlreadonly&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;@url@&quot;/&gt;
+  &lt;parameter name=&quot;username&quot; value=&quot;@username@&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.neso.factory.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.neso.factory.RetryListener&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;Login&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.neso.testcase.LoginCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkLogin&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.neso.testcase.LoginCase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login --&gt;
+  &lt;test name=&quot;dataLoad&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.neso.testcase.CallHistoryCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkDataLoad&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.neso.testcase.CallHistoryCase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- dataLoad --&gt;
+  &lt;test name=&quot;searchRules&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.neso.testcase.CallHistoryCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkDefaultSearch&quot;/&gt;
+          &lt;include name=&quot;checkInputTypeRules&quot;/&gt;
+          &lt;include name=&quot;checkInputLength&quot;/&gt;
+          &lt;include name=&quot;checkInputLength2&quot;/&gt;
+          &lt;include name=&quot;checkSearch&quot;/&gt;
+          &lt;include name=&quot;checkLoadFollowUp&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.neso.testcase.CallHistoryCase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- searchRules --&gt;
+  &lt;test name=&quot;edit&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.neso.testcase.CallHistoryCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkEditRules&quot;/&gt;
+          &lt;include name=&quot;checkEdit&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.neso.testcase.CallHistoryCase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- edit --&gt;
+  &lt;test name=&quot;linkOtherPage&quot;&gt;
+    &lt;parameter name=&quot;customerUrl&quot; value=&quot;http://central.newegg.org/Portal/#/NeweggCentral.NESO.Customer/CustomerMaintain?customernumber=%s&quot;/&gt;
+    &lt;parameter name=&quot;followUpIDUrl&quot; value=&quot;http://central.newegg.org/portal/#/NeweggCentral.NESO.InternalCommunicationCenter/RequestDetail?RequestID=%s&amp;amp;Layout=Normal&quot;/&gt;
+    &lt;parameter name=&quot;orderDetailUrl&quot; value=&quot;http://central.newegg.org/Portal/#/NeweggCentral.NESO.OrderDetail/OrderDetail&quot;/&gt;
+    &lt;parameter name=&quot;merchantUrl&quot; value=&quot;http://centraltest2.newegg.org/neso-crm/merchant-detail?merchantid=%s&quot;/&gt;
+    &lt;parameter name=&quot;orderMaintainUrl&quot; value=&quot;http://central.newegg.org/Portal/#/NeweggCentral.B2B.B2BSO/B2BMaintain&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.neso.testcase.SocialMediaCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkLinkOtherPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.neso.testcase.SocialMediaCase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- linkOtherPage --&gt;
+&lt;/suite&gt; &lt;!-- NESO_CallHistory --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for NESO_CallHistory</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Login (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">dataLoad (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">searchRules (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">edit (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">linkOtherPage (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for NESO_CallHistory</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for NESO_CallHistory</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_NESO_CallHistory');
+function tableData_NESO_CallHistory() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(11);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'checkLogin')
+data.setCell(0, 2, 'com.neso.testcase.LoginCase')
+data.setCell(0, 3, 0);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkDataLoad')
+data.setCell(1, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'checkInputTypeRules')
+data.setCell(2, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkInputLength')
+data.setCell(3, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'checkInputLength2')
+data.setCell(4, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkLoadFollowUp')
+data.setCell(5, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkSearch')
+data.setCell(6, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(6, 3, 0);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checkDefaultSearch')
+data.setCell(7, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(7, 3, 0);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'checkEditRules')
+data.setCell(8, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(8, 3, 0);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkEdit')
+data.setCell(9, 2, 'com.neso.testcase.CallHistoryCase')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'checkLinkOtherPage')
+data.setCell(10, 2, 'com.neso.testcase.SocialMediaCase')
+data.setCell(10, 3, 0);
+window.suiteTableData['NESO_CallHistory']= { tableData: data, tableDiv: 'times-div-NESO_CallHistory'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-NESO_CallHistory">
+              </div> <!-- times-div-NESO_CallHistory -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for NESO_CallHistory</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">31 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.neso.testcase.SocialMediaCase</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">checkTextStatus</span>
+                <br/>
+                <span class="ignored-method-name">checkDeleteSocialMedia</span>
+                <br/>
+                <span class="ignored-method-name">checkEditRules</span>
+                <br/>
+                <span class="ignored-method-name">checkEditSocialMedia</span>
+                <br/>
+                <span class="ignored-method-name">checkButtonStatus</span>
+                <br/>
+                <span class="ignored-method-name">checkSearchSocialMedia</span>
+                <br/>
+                <span class="ignored-method-name">checkAddRequiredRules</span>
+                <br/>
+                <span class="ignored-method-name">checkDataLoad</span>
+                <br/>
+                <span class="ignored-method-name">checkAddTextRules</span>
+                <br/>
+                <span class="ignored-method-name">checkAddSocialMedia</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.neso.testcase.CallHistoryCase</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">checkInputLength2</span>
+                <br/>
+                <span class="ignored-method-name">checkInputLength2</span>
+                <br/>
+                <span class="ignored-method-name">checkDataLoad</span>
+                <br/>
+                <span class="ignored-method-name">checkDataLoad</span>
+                <br/>
+                <span class="ignored-method-name">checkInputLength</span>
+                <br/>
+                <span class="ignored-method-name">checkInputLength</span>
+                <br/>
+                <span class="ignored-method-name">checkInputTypeRules</span>
+                <br/>
+                <span class="ignored-method-name">checkDefaultSearch</span>
+                <br/>
+                <span class="ignored-method-name">checkInputTypeRules</span>
+                <br/>
+                <span class="ignored-method-name">checkDefaultSearch</span>
+                <br/>
+                <span class="ignored-method-name">checkEditRules</span>
+                <br/>
+                <span class="ignored-method-name">checkEditRules</span>
+                <br/>
+                <span class="ignored-method-name">checkLoadFollowUp</span>
+                <br/>
+                <span class="ignored-method-name">checkLoadFollowUp</span>
+                <br/>
+                <span class="ignored-method-name">checkSearch</span>
+                <br/>
+                <span class="ignored-method-name">checkSearch</span>
+                <br/>
+                <span class="ignored-method-name">checkEdit</span>
+                <br/>
+                <span class="ignored-method-name">checkEdit</span>
+                <br/>
+                <span class="ignored-method-name">checkLinkOtherPage</span>
+                <br/>
+                <span class="ignored-method-name">checkLinkOtherPage</span>
+                <br/>
+                <span class="ignored-method-name">checkLinkOtherPage</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-NESO_CallHistory" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.neso.testcase.LoginCase</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init(@browser@, @environment@)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">checkLogin(@url@, @username@, @password@)</span>
+                <span class="method-start">56 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.neso.testcase.CallHistoryCase</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">checkDataLoad</span>
+                <span class="method-start">2588 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkDefaultSearch</span>
+                <span class="method-start">3517 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkInputTypeRules</span>
+                <span class="method-start">3517 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkInputLength</span>
+                <span class="method-start">3518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkInputLength2</span>
+                <span class="method-start">3518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkSearch</span>
+                <span class="method-start">3518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkLoadFollowUp</span>
+                <span class="method-start">3519 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEditRules</span>
+                <span class="method-start">4460 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEdit(Sqlreadonly, Read4all)</span>
+                <span class="method-start">4461 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_ContratApproval" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="dataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="search" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchRules" />
+				  <include name="checkSearch" />
+				  <include name="checkSearchResult" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="approve" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkApprove" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="decline" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkDecline" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="reviewContract" preserver-order="true">
+	<parameter name="link" value="http://neg-app-img/B2BDocument/ThirdShippingAccountContract" />
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkReviewContract" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="linkOtherPage" preserver-order="true">
+	<parameter name="link" value="https://central3testing.newegg.org/neso-crm-merchant-detail/main?merchantid=" />
+		<classes>
+			<class name="com.neso.testcase.ContractApprovalCenterCase">
+				<methods preserve-order="true">
+				  <include name="checkLinkOtherPage" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->

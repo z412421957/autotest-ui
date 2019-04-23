@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NESO_CallFilter" parallel="none">
+	<parameter name="url" value="@url@" />
+	<parameter name="url2" value="@url2@" />
+	<parameter name="browser" value="@browser@" />
+	<parameter name="environment" value="@environment@" />
+	<parameter name="username" value="@username@" />
+	<parameter name="password" value="@password@" />
+	<parameter name="sqlUsername" value="Sqlreadonly" />
+	<parameter name="sqlPassword" value="Read4all" />
+	
+	
+	<test name="Login" preserver-order="true">	
+		<classes>
+			<class name="com.neso.testcase.LoginCase">
+				<methods preserve-order="true">
+			      <include name="checkLogin" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="load" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.BatchCreateOrderCase">
+				<methods preserve-order="true">
+				  <include name="checkDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="searchSORules" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.BatchCreateOrderCase">
+				<methods preserve-order="true">
+				  <include name="checkSearchSORules" />
+				  <include name="checkSearchSO" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="historyDataLoad" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.BatchCreateOrderCase">
+				<methods preserve-order="true">
+				  <include name="checkHistoryDataLoad" />
+			    </methods> 
+			</class>
+		</classes>
+	</test>
+	
+	<test name="historySearch" preserver-order="true">
+		<classes>
+			<class name="com.neso.testcase.BatchCreateOrderCase">
+				<methods preserve-order="true">
+				  <include name="checkHistorySearch" />
+			    </methods> 
+			</class>
+		</classes>
+	</test> 
+	
+	
+	<listeners>
+			<listener class-name="com.neso.factory.TestListener" /> 
+			<listener class-name="com.neso.factory.RetryListener" /> 
+			<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		</listeners>
+ <!-- Test -->
+</suite> <!-- Suite -->
